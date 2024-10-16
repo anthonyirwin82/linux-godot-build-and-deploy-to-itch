@@ -1,6 +1,6 @@
 # Linux Godot Automatically Build and Deploy to itch.io
 
-This is a script I built to make it ridiculously easy to automatically build for all release platforms using ```godot --headless``` and automatically deploy them to itch.io using the itch.io ```butler``` utility.
+This is a script I wrote to make it ridiculously easy to automatically build for all release platforms using ```godot --headless``` and automatically deploy them to itch.io using the itch.io ```butler``` utility.
 
 This is useful for deploying initial releases and updating releases for games you have on itch.io.
 
@@ -22,7 +22,7 @@ You also need the export templates downloaded for your version of Godot.
 ### Godot Project Settings:
 You need to set the following values in the Godot Project Settings which you can do by going to the ```Project``` menu then ```Project Settings...``` then in the ```General``` tab go to the ```Application``` secction and set the ```Name``` and ```Version``` values.
 
-**Name** is the name of you project and will be used for the game executable name. e.g. name.exe, name.app etc.
+**Name** is the name of your project and will be used for the game executable name. e.g. name.exe, name.app etc.
 
 **Version** is the version of the build for the game and is used by the butler utility for itch.io keeping track of versions.
 
@@ -44,6 +44,8 @@ As mentioned earlier the default preset names are as follows:
 * **linux_arm64="linux_arm64"**
 * **win64="win64"**
 * **mac="mac"**
+
+If you dont' want to build for one or more of these presets then you can comment them out. For example, if you don't want to build for the web then you can comment it out by doing the following ```#web="web"```
 
 Change the values to the presets you set in the Godot Export Settings.
 
