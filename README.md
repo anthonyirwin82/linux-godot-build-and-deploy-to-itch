@@ -57,7 +57,7 @@ Change the values to the presets you set in the Godot Export Settings.
 
 **Butler is not uploading the game files** Make sure you have [installed butler](https://itch.io/docs/butler/installing.html) and have [logged into butler](https://itch.io/docs/butler/login.html) at least once, it remembers your credentials. See the buttler documentation below for further details. Also, make sure the ```itch_path``` value is correct and that the ```builds/``` directory exists with the game build files.
 
-**The web export is a downloadable zip file instead of playable in the browser** After your first deployment to itch.io you need to tell itch.io which file is the html playable version. In the 'Itch.io Dashboard' edit the game. Then set the ```Kind of project``` to ```html``` then tick the ```This file will be played in the web browser``` checkbox and set the setting for the html embedded game.
+**The web export is a downloadable zip file instead of playable in the browser** After your first deployment to itch.io you need to tell itch.io which file is the html playable version. Go to the itch.io ```Creator Dashboard``` then click ```edit``` on the game. Then set the ```Kind of project``` to ```html``` then tick the ```This file will be played in the web browser``` checkbox and set the settings for the html embedded game.
 
 ## Other documentation:
 
