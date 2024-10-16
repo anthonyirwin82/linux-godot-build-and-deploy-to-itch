@@ -4,7 +4,7 @@ This is a script I built to make it ridiculously easy to automatically build for
 
 This is useful for deploying initial releases and updating releases for games you have on itch.io.
 
-I created this for my own use and distributing it as others are likely to find it useful. I consider this feature complete so there will not be updates to this unless there are bugs found or changes to the tools the script uses.
+I created this for my own use and distributed it as others are likely to find it useful. I consider this feature complete so there will not be updates to this unless there are bugs found or changes to the tools the script uses.
 
 ## You should setup the following in your Godot project before using this script:
 ### Godot Export Presets:
@@ -53,7 +53,9 @@ Change the values to the presets you set in the Godot Export Settings.
 
 **The version is always 1.0.0** If this is the case then the ```Version``` is not set in the ```Application``` section in the ```General``` tab of the ```Godot Project Settings```.
 
-**Butler is not uploading the game files** Make sure you have [installed butler](https://itch.io/docs/butler/installing.html) and have [logged into butler](https://itch.io/docs/butler/login.html) at least once, it remembers your credentials. See the buttler documentation below for further details. Also make sure the ```itch_path``` value is correct and that the ```builds/``` directory exists with the game build files.
+**Butler is not uploading the game files** Make sure you have [installed butler](https://itch.io/docs/butler/installing.html) and have [logged into butler](https://itch.io/docs/butler/login.html) at least once, it remembers your credentials. See the buttler documentation below for further details. Also, make sure the ```itch_path``` value is correct and that the ```builds/``` directory exists with the game build files.
+
+**The web export is a downloadable zip file instead of playable in the browser** After your first deployment to itch.io you need to tell itch.io which file is the html playable version. In the 'Itch.io Dashboard' edit the game. Then set the ```Kind of project``` to ```html``` then tick the ```This file will be played in the web browser``` checkbox and set the setting for the html embedded game.
 
 ## Other documentation:
 
