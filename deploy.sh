@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 # deploy.sh version 1.0.0
+# you can get the latest version of this script at 
+# https://github.com/anthonyirwin82/linux-godot-build-and-deploy-to-itch
 #
 # This script can automatically build and deploy godot projects to itch.io using godot --headless
 # and the itch.io butler utility https://itch.io/docs/butler/
