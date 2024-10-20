@@ -49,6 +49,68 @@ If you dont' want to build for one or more of these presets then you can comment
 
 Change the values to the presets you set in the Godot Export Settings.
 
+## Using Command Line Arguments
+### Running the script to build and deploy/Running the script to only build or only deploy:
+- To run the script with the default options run ```./deploy.sh``` without any arguments.
+- To run the script without building the project run ```./deploy.sh --no-build``` or ```./deploy.sh -nb```
+- To run the script without deploying to itch.io run ```./deploy.sh --no-deploy``` or ```./deploy.sh -nd```
+
+### Getting help:
+You can display help at the command line by running ```./deploy.sh --help``` or ```./deploy.sh -h```.
+
+### Display deployment information:
+You can display information about the build before running the ```./deploy.sh``` script to see what the script will do.
+You can get this information by running ```./deploy.sh --info``` or ```./deploy.sh -i```
+
+**Example output:**
+```
+-----------------------
+Deployment information:
+-----------------------
+
+Do git pull before build: false
+Building projects with Godot: true
+Deploying to itch.io: true
+Project Version: 1.0
+Project Filename: game-name (.exe .app etc) (Web build is always index.html)
+
+-------------------------------------
+Building for the following platforms:
+-------------------------------------
+
+- Web to /home/username/repos/Godot/game-name/build/web
+- Linux x86_64 to /home/username/repos/Godot/game-name/build/linux_x64
+- Linux arm64 to /home/username/repos/Godot/game-name/build/linux_arm64
+- Windows 64 bit to /home/username/repos/Godot/game-name/build/win64
+- MacOS to /home/username/repos/Godot/game-name/build/mac
+
+---------------------------------------------------------------------
+The following distribution files will be included in relevant builds:
+---------------------------------------------------------------------
+
+- All builds from /home/username/repos/Godot/game-name/dist/all
+- Web builds only from /home/username/repos/Godot/game-name/dist/web
+- All Linux builds from /home/username/repos/Godot/game-name/dist/linux_all
+- Linux x86_64 builds only from /home/username/repos/Godot/game-name/dist/linux_x64
+- Linux arm64 builds only from /home/username/repos/Godot/game-name/dist/linux_arm64
+- Windows 64 bit builds only from /home/username/repos/Godot/game-name/dist/win64
+- MacOS builds only from /home/username/repos/Godot/game-name/dist/mac
+```
+
+### Distributing additional files with your release builds:
+You can distribute extra files that are not part of the Godot Project from a dist directory.
+You can distribute files to all platforms and files to specific platforms.
+You can generate the dist directories by running ```./deploy.sh --generate-dist-dirs``` or ```./deploy.sh -g```
+After the directories are generated you can add extra files to the dist directories to be added to builds.
+
+### Deleting the build directories:
+You can safely delete the build directories and they will be regenerated.
+You can delete the build directories by running ```./deploy.sh --delete-build-dirs``` or ```./deploy.sh -db```
+
+### Deleting the dist directories:
+**WARNING:** You probably don't want to do this because these are files you put there and are not dynamically created.
+You can delete the dist directories by running ```./deploy.sh --delete-dist-dirs``` or ```./deploy.sh -dd```
+
 ## Troubleshooting:
 
 **The executable files are ```run_game.exe```, ```run_game.app``` etc.** If this is the case then the ```Name``` is not set in the ```Application``` section in the ```General``` tab of the ```Godot Project Settings```.
