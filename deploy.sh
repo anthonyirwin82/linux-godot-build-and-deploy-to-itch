@@ -304,8 +304,8 @@ fi
 # https://itch.io/docs/butler/
 if $deploy_to_itch ; then
   [ -f "$web_file" ] && butler push "$web_path" "$itch_path:$web" --userversion $version
-  [ -f "$linux_x64_file" ] && butler push "$win64_path" "$itch_path:$win64" --userversion $version
-  [ -f "$linux_arm64_file" ] && butler push "$linux_x64_path" "$itch_path:$linux_x64" --userversion $version
-  [ -f "$win64_file" ] && butler push "$linux_arm64_path" "$itch_path:$linux_arm64" --userversion $version
+  [ -f "$linux_x64_file" ] && butler push "$linux_x64_path" "$itch_path:$linux_x64" --userversion $version
+  [ -f "$linux_arm64_file" ] && butler push "$linux_arm64_path" "$itch_path:$linux_arm64" --userversion $version
+  [ -f "$win64_file" ] && butler push "$win64_path" "$itch_path:$win64" --userversion $version
   [ -d "$mac_file" ] && butler push "$mac_path" "$itch_path:$mac" --userversion $version
 fi
